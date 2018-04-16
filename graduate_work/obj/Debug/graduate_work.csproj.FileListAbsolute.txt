@@ -1,0 +1,15 @@
+C:\Users\dmitriy\source\repos\graduate_work\graduate_work\bin\Debug\graduate_work.exe.config
+C:\Users\dmitriy\source\repos\graduate_work\graduate_work\bin\Debug\graduate_work.exe
+C:\Users\dmitriy\source\repos\graduate_work\graduate_work\bin\Debug\graduate_work.pdb
+C:\Users\dmitriy\source\repos\graduate_work\graduate_work\obj\Debug\graduate_work.csprojResolveAssemblyReference.cache
+C:\Users\dmitriy\source\repos\graduate_work\graduate_work\obj\Debug\MainWindow.g.cs
+C:\Users\dmitriy\source\repos\graduate_work\graduate_work\obj\Debug\App.g.cs
+C:\Users\dmitriy\source\repos\graduate_work\graduate_work\obj\Debug\graduate_work_MarkupCompile.cache
+C:\Users\dmitriy\source\repos\graduate_work\graduate_work\obj\Debug\graduate_work_MarkupCompile.lref
+C:\Users\dmitriy\source\repos\graduate_work\graduate_work\obj\Debug\MainWindow.baml
+C:\Users\dmitriy\source\repos\graduate_work\graduate_work\obj\Debug\graduate_work.g.resources
+C:\Users\dmitriy\source\repos\graduate_work\graduate_work\obj\Debug\graduate_work.Properties.Resources.resources
+C:\Users\dmitriy\source\repos\graduate_work\graduate_work\obj\Debug\graduate_work.csproj.GenerateResource.cache
+C:\Users\dmitriy\source\repos\graduate_work\graduate_work\obj\Debug\graduate_work.csproj.CoreCompileInputs.cache
+C:\Users\dmitriy\source\repos\graduate_work\graduate_work\obj\Debug\graduate_work.exe
+C:\Users\dmitriy\source\repos\graduate_work\graduate_work\obj\Debug\graduate_work.pdb
