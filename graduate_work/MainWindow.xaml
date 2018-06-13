@@ -6,7 +6,26 @@
         xmlns:local="clr-namespace:graduate_work"
         mc:Ignorable="d"
         Title="MainWindow" Height="600" Width="800" WindowStartupLocation="CenterScreen">
+
+    <Window.Resources>
+        <Style x:Key="LabelBorder" TargetType="Border">
+            <Setter Property="BorderBrush" Value="Black"/>
+            <Setter Property="BorderThickness" Value="1"/>
+            <Setter Property="CornerRadius" Value="4,0,0,4"/>
+            <Setter Property="Background" Value="#FF5B5B5B"/>
+        </Style>
+    </Window.Resources>
+
     <Grid>
-        
+        <Grid Background="#FF3B3B41">
+            <TextBox Height="40" Margin="25,316,0,214" TextWrapping="Wrap" Width="250" FontFamily="Segoe UI Semilight" FontSize="22" VerticalContentAlignment="Center" Padding="6,1,1,1" HorizontalAlignment="Center"/>
+            <PasswordBox Height="40" Margin="25,365,0,165"  Width="250" FontFamily="Segoe UI Semilight" FontSize="22" VerticalContentAlignment="Center" Padding="6,1,1,1" HorizontalAlignment="Center"/>
+            <Border Style="{StaticResource LabelBorder}" Margin="0,316,292,214" HorizontalAlignment="Center" Padding="2">
+                <Label Content="Логин" HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="Segoe UI Semilight" FontSize="20" Foreground="Black" Margin="0"/>
+            </Border>
+            <Border Style="{StaticResource LabelBorder}" Margin="0,365,305,165" HorizontalAlignment="Center" Padding="2">
+                <Label Content="Пароль" HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="Segoe UI Semilight" FontSize="20" Foreground="Black" Margin="0"/>
+            </Border>
+        </Grid>
     </Grid>
 </Window>
