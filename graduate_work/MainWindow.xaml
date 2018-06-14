@@ -14,18 +14,101 @@
             <Setter Property="CornerRadius" Value="4,0,0,4"/>
             <Setter Property="Background" Value="#FF5B5B5B"/>
         </Style>
+        <Style x:Key="insertButton" TargetType="Button">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <Border x:Name="border" 
+                                BorderBrush="Black" 
+                                BorderThickness="2" 
+                                CornerRadius="4"
+                                SnapsToDevicePixels="True">
+                            <Border.Background>
+                                <RadialGradientBrush RadiusX="0.9" RadiusY="0.9">
+                                    <GradientStop Color="#FF3B3B41" Offset="1"/>
+                                    <GradientStop Color="#FF007ACC" Offset="0"/>
+                                </RadialGradientBrush>
+                            </Border.Background>
+                            <ContentPresenter RecognizesAccessKey="True" 
+                                              ContentTemplate="{TemplateBinding ContentTemplate}" 
+                                              Content="{TemplateBinding Content}" 
+                                              ContentStringFormat="{TemplateBinding ContentStringFormat}" 
+                                              Focusable="False" 
+                                              HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" 
+                                              Margin="{TemplateBinding Padding}" 
+                                              VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="False">
+                                <Setter Property="Background" TargetName="border">
+                                    <Setter.Value>
+                                        <RadialGradientBrush RadiusX="0.8" RadiusY="0.7">
+                                            <GradientStop Color="#FF3B3B41" Offset="1"/>
+                                            <GradientStop Color="#FF007ACC" Offset="0"/>
+                                        </RadialGradientBrush>
+                                    </Setter.Value>
+                                </Setter>
+                            </Trigger>
+                            <Trigger Property="IsPressed" Value="True">
+                                <Setter Property="Background" TargetName="border">
+                                    <Setter.Value>
+                                        <RadialGradientBrush RadiusX="0.95" RadiusY="0.95">
+                                            <GradientStop Color="#FF3B3B41" Offset="1"/>
+                                            <GradientStop Color="#FF007ACC" Offset="0"/>
+                                        </RadialGradientBrush>
+                                    </Setter.Value>
+                                </Setter>
+                                <Setter TargetName="border" Property="BorderThickness" Value="0"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
     </Window.Resources>
 
     <Grid>
         <Grid Background="#FF3B3B41">
-            <TextBox Height="40" Margin="25,316,0,214" TextWrapping="Wrap" Width="250" FontFamily="Segoe UI Semilight" FontSize="22" VerticalContentAlignment="Center" Padding="6,1,1,1" HorizontalAlignment="Center"/>
-            <PasswordBox Height="40" Margin="25,365,0,165"  Width="250" FontFamily="Segoe UI Semilight" FontSize="22" VerticalContentAlignment="Center" Padding="6,1,1,1" HorizontalAlignment="Center"/>
-            <Border Style="{StaticResource LabelBorder}" Margin="0,316,292,214" HorizontalAlignment="Center" Padding="2">
-                <Label Content="Логин" HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="Segoe UI Semilight" FontSize="20" Foreground="Black" Margin="0"/>
-            </Border>
-            <Border Style="{StaticResource LabelBorder}" Margin="0,365,305,165" HorizontalAlignment="Center" Padding="2">
-                <Label Content="Пароль" HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="Segoe UI Semilight" FontSize="20" Foreground="Black" Margin="0"/>
-            </Border>
+            <Grid HorizontalAlignment="Center" Height="246" Margin="179,260,169,64" VerticalAlignment="Center" Width="444">
+                <TextBox Margin="138,25,56,181" TextWrapping="Wrap" FontFamily="Segoe UI Semilight" FontSize="22" VerticalContentAlignment="Center" Padding="6,1,1,1" Height="40" Width="250"/>
+                <PasswordBox Height="40" Margin="138,74,56,132" FontFamily="Segoe UI Semilight" FontSize="22" VerticalContentAlignment="Center" Padding="6,1,1,1" Width="250"/>
+                <Border Style="{StaticResource LabelBorder}" Margin="68,25,306,181" Padding="2" Height="40" Width="70">
+                    <Label Content="Логин" HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="Segoe UI Semilight" FontSize="20" Foreground="Black" Margin="0"/>
+                </Border>
+                <Border Style="{StaticResource LabelBorder}" Margin="55,74,307,132" Padding="2" Height="40">
+                    <Label Content="Пароль" HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="Segoe UI Semilight" FontSize="20" Foreground="Black" Margin="0"/>
+                </Border>
+                <Button Style="{StaticResource ResourceKey=insertButton}" Content="Войти" HorizontalAlignment="Left" Margin="55,119,0,0" VerticalAlignment="Top" Width="333" Height="77" FontSize="20" FontFamily="Segoe UI Semilight">
+                    <Button.Effect>
+                        <DropShadowEffect x:Name="bEnter_dse" Direction="270" BlurRadius="20" Opacity="0.8" />
+                    </Button.Effect>
+                    <Button.Background>
+                        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                            <GradientStop Color="#FF3B3B41" Offset="1"/>
+                            <GradientStop Color="White"/>
+                            <GradientStop Color="#FF818185" Offset="0.677"/>
+                        </LinearGradientBrush>
+                    </Button.Background>
+                </Button>
+            </Grid>
+        </Grid>
+        <Grid Background="#FF3B3B41">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="50"/>
+                <RowDefinition Height="173*"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition Width="2*"/>
+            </Grid.ColumnDefinitions>
+            <ListBox Grid.Row="1"/>
+            <ListBox Grid.Column="1" HorizontalAlignment="Left" Height="520" Grid.Row="1" VerticalAlignment="Top" Width="528"/>
+            <Grid Grid.ColumnSpan="2" Background="#FF3B3B41">
+                <Grid.Effect>
+                    <DropShadowEffect Direction="270" Opacity="0.5" BlurRadius="8" ShadowDepth="2"/>
+                </Grid.Effect>
+            </Grid>
+
         </Grid>
     </Grid>
 </Window>

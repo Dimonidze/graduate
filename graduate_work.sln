@@ -5,6 +5,8 @@ VisualStudioVersion = 15.0.27428.2037
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "graduate_work", "graduate_work\graduate_work.csproj", "{66B4534C-8916-4D9A-9C24-32B25C4DD45E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "netservice", "netservice\netservice.csproj", "{A54E6884-71B6-4E0A-8F33-1D40FE8D58D2}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{66B4534C-8916-4D9A-9C24-32B25C4DD45E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{66B4534C-8916-4D9A-9C24-32B25C4DD45E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{66B4534C-8916-4D9A-9C24-32B25C4DD45E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A54E6884-71B6-4E0A-8F33-1D40FE8D58D2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A54E6884-71B6-4E0A-8F33-1D40FE8D58D2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A54E6884-71B6-4E0A-8F33-1D40FE8D58D2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A54E6884-71B6-4E0A-8F33-1D40FE8D58D2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
